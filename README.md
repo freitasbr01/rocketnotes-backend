@@ -11,7 +11,7 @@
 
 ## 💻 Sobre o projeto
 
-Nesse projeto foi desenvolvido um aplicativo web para criar notas. A plataforma permite aos usuários criar uma conta pessoal onde podem acessar e personalizar sua própria lista de notas. Oferece também a funcionalidade de atribuir tags a cada nota que o usuário criou.
+Nesse projeto foi desenvolvido um aplicação web para criar notas. A plataforma permite aos usuários criar uma conta pessoal onde podem acessar e personalizar sua própria lista de notas. Oferece também a funcionalidade de atribuir tags a cada nota que o usuário criou.
 
 Projeto desenvolvido durante o Curso Explorer da **Rocketseat**.
 
