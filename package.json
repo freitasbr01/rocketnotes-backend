@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@npmcli/fs": "^3.1.1",
     "axios": "^1.6.8",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
@@ -24,7 +25,8 @@
     "node": "^20.13.1",
     "pm2": "^5.3.1",
     "sqlite": "^4.2.1",
-    "sqlite3": "^5.1.6"
+    "sqlite3": "^5.1.6",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
