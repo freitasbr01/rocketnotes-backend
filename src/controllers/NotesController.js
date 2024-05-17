@@ -1,37 +1,19 @@
 const knex = require("../database/knex")
+const NoteRepository = require('../repositories/NoteRepository');
+const NoteCreateService = require('../services/NoteCreateService');
 
 class NotesController {
   async create(request, response) {
-    const { title, description, tags, links } = request.body
+    const { title, description, tags, links } = request.body;
     const user_id = request.user.id;
 
-    const [note_id] = await knex("notes").insert({
-      title,
-      description,
-      user_id
-    })
-
-    const linksInsert = links.map(link => {
-      return {
-        note_id,
-        url: link
-      }
-    })
-
-    await knex("links").insert(linksInsert)
-
-    const tagsInsert = tags.map(name => {
-      return {
-        note_id,
-        name,
-        user_id
-      }
-    })
-
-    await knex("tags").insert(tagsInsert)
+    const noteRepository = new NoteRepository();
+    const noteCreateService = new NoteCreateService(noteRepository);
+    await noteCreateService.execute({ title, description, tags, links, user_id });
 
     return response.json()
-  } // cria
+  };
+
 
   async show(request, response) {
     const { id } = request.params
@@ -48,6 +30,7 @@ class NotesController {
   } // exibi um especifico
   // Em resumo, este método show é usado para buscar uma nota específica, juntamente com suas tags e links associados, e enviar esses dados como uma resposta JSON.
 
+
   async delete(request, response) {
     const { id } = request.params
 
@@ -55,6 +38,7 @@ class NotesController {
 
     return response.json()
   } // Deleta
+
 
   async index(request, response) {
     const { title, tags } = request.query
