@@ -1,7 +1,7 @@
-## Rocket Notes
+## RocketNotes
 
 <h3 align="center"> 
-	Rocket Notes
+	RocketNotes
 </h3>
 
 <p align="center">
