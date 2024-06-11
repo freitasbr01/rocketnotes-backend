@@ -1,4 +1,4 @@
-// Aqui teremos as rotas de sessão
+
 
 const { Router } = require("express");
 

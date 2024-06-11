@@ -1,4 +1,4 @@
-// FOI SEPARADO NESSE ARQUIVO A RESPONSABILIDADE DA MANIPULAÇÃO DOS DADOS DO USUÁRIO.
+
 
 const sqliteConnection = require('../database/sqlite');
 
@@ -8,7 +8,7 @@ class UserRepository {
     const user = await database.get("SELECT * FROM users WHERE email = (?)", [email]);
 
     return user;
-  }; // Nessa função está mostrando como que o banco vai lidar com a busca pelo email.
+  };
 
   async create({ name, email, password }) {
     const database = await sqliteConnection();
@@ -19,7 +19,7 @@ class UserRepository {
     );
 
     return {id: userId};
-  }; // Nessa função está mostrando como que o banco vai lidar com a criação.
+  }; 
 };
 
 module.exports = UserRepository;

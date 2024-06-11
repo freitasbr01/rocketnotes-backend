@@ -12,11 +12,10 @@ const routes = require('./routes')
 migrationsRun()
 
 const app = express()
-app.use(cors()); // habliitado para que o backend consiga atender as requisições do frontend
+app.use(cors());
 app.use(express.json());
 app.use("/files", express.static(uploadConfig.UPLOADS_FOLDER));
-// Isso define uma rota no servidor Express.js. Qualquer requisição que comece com “/files” será tratada por esta rota.
-// Este código permite que os arquivos no diretório uploadConfig.UPLOADS_FOLDER sejam acessados através de requisições HTTP que começam com “/files”. Por exemplo, se houver um arquivo chamado “image.jpg” no diretório uploadConfig.UPLOADS_FOLDER, ele poderá ser acessado com uma requisição HTTP para “/files/image.jpg”.
+
 
 app.use(routes)
 

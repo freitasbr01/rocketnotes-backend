@@ -1,6 +1,3 @@
-
-
-
 class NoteCreateService {
   constructor(noteRepository) {
     this.noteRepository = noteRepository;

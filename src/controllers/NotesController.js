@@ -27,9 +27,7 @@ class NotesController {
       tags,
       links
     })
-  } // exibi um especifico
-  // Em resumo, este método show é usado para buscar uma nota específica, juntamente com suas tags e links associados, e enviar esses dados como uma resposta JSON.
-
+  }
 
   async delete(request, response) {
     const { id } = request.params
@@ -37,7 +35,7 @@ class NotesController {
     await knex("notes").where({ id }).delete()
 
     return response.json()
-  } // Deleta
+  }
 
 
   async index(request, response) {
@@ -81,7 +79,7 @@ class NotesController {
     })
 
     return response.json(notesWhithTags)
-  } // exibi varios
+  }
 }
 
 module.exports = NotesController

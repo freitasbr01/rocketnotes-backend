@@ -1,8 +1,8 @@
-## RocketNotes
+<h2 align="center">RocketNotes</h2>
 
-<h3 align="center"> 
-	RocketNotes
-</h3>
+<h1 align="center">
+    <img width="600px" alt="RocketNotes" title="#RocketNotes" src="https://github.com/freitasbr01/rocketnotes-front/blob/main/src/assets/rocketnotes2.png" />
+</h1>
 
 <p align="center">
  <a href="#-sobre-o-projeto">Sobre</a> •

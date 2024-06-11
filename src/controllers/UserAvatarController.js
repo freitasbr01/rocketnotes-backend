@@ -1,5 +1,3 @@
-// Atualizando a foto do avatar e excluindo a antiga
-
 const knex = require("../database/knex");
 const AppError = require("../utils/AppError");
 const DiskStorage = require("../providers/DiskStorage")
@@ -21,7 +19,6 @@ class UserAvatarController {
     if (user.avatar) {
       await diskStorage.deleteFile(user.avatar);
     }
-    // se existe uma foto antes eu preciso deletar a foto que é antiga para colocar a nova no lugar.
 
     const filename = await diskStorage.saveFile(avatarFilename);
     user.avatar = filename;

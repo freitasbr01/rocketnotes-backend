@@ -14,10 +14,6 @@ class UsersController {
     const userCreateService = new UserCreateService(userRepository);
     await userCreateService.execute({ name, email, password });
 
-    // Faço a instância de UserRepository que está utilizando o SQlite.
-    // Faço a instância de UserCreateService que cria usuário, passando qual o repositório que vou usar, no caso SQlite.
-    // Pego o userCreateService que foi feito a instância e executo a função dentro dessa classe.
-
     return response.status(201).json()
   }
 
